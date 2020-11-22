@@ -46,6 +46,12 @@ module.exports = app => {
         client.on('close', () => {
             connections.delete(client);
         });
+
+        setInterval(() => {
+            connections.forEach((conn) => {
+              conn.send(new Date().toTimeString());
+            });
+        }, 30000);
     };
 
     app.ws('/channel', handleWebsocketConnection);
