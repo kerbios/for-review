@@ -49,7 +49,7 @@ module.exports = app => {
 
         setInterval(() => {
             connections.forEach((conn) => {
-              conn.send(new Date().toTimeString());
+              conn.send({ serverTime: new Date().toTimeString() });
             });
         }, 30000);
     };
