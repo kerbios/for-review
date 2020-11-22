@@ -1,6 +1,6 @@
 # Test task chat with websockets and react, redux
 
-## Instrcustion
+## Instructions
 
 To send the messages into the channel you need to Login 
 
